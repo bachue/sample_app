@@ -13,9 +13,12 @@ end
 group :test do
   gem 'rspec', '2.0.1'
   gem 'webrat', '0.7.1'
+  gem 'spork', '0.8.4'  
 end
 
 gem 'sqlite3'
+gem 'autotest', '4.3.2'
+gem 'ZenTest'
 
 # Use unicorn as the web server
 # gem 'unicorn'

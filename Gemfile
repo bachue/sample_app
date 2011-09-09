@@ -7,18 +7,21 @@ gem 'sqlite3-ruby', '1.2.5', :require => 'sqlite3'
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
 group :development do
-  gem 'rspec-rails', '2.0.1'
+  gem 'guard'
+  gem 'guard-rspec'
+  gem 'rspec-rails'
 end
 
 group :test do
-  gem 'rspec', '2.0.1'
+  gem 'spork'
+  gem 'guard-spork'
+  gem 'libnotify'
+  gem 'rb-inotify'
+  gem 'rspec'
   gem 'webrat', '0.7.1'
-  gem 'spork', '0.8.4'  
 end
 
 gem 'sqlite3'
-gem 'autotest', '4.3.2'
-gem 'ZenTest'
 
 # Use unicorn as the web server
 # gem 'unicorn'

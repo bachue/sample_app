@@ -25,7 +25,7 @@ guard 'rspec', :cli => "--color --format nested --drb" do
   watch('config/routes.rb')                           { "spec/routing" }
   watch('app/controllers/application_controller.rb')  { "spec/controllers" }
   # Capybara request specs
-  watch(%r{^app/views/layouts/(.+)/.*\.(erb|haml)$})  { |m| "spec/" }
+  watch(%r{^app/views/layouts/(.+)/.*\.(erb|haml)$})  { "spec/" }
   watch(%r{^app/views/(.+)/.*\.(erb|haml)$})          { |m| "spec/requests/#{m[1]}_spec.rb" }
 end
 

@@ -10,6 +10,7 @@ group :development do
   gem 'guard'
   gem 'guard-rspec'
   gem 'rspec-rails'
+  gem 'annotate', :git => 'https://github.com/miyucy/annotate_models.git', :branch => 'restart'
 end
 
 group :test do

@@ -1,3 +1,10 @@
+GIT
+  remote: https://github.com/miyucy/annotate_models.git
+  revision: 280a9e56e81d0f3ed0f7c381b5935d39a3e6918c
+  branch: restart
+  specs:
+    annotate (2.4.2)
+
 GEM
   remote: http://rubygems.org/
   specs:
@@ -36,7 +43,7 @@ GEM
     ffi (1.0.9)
     guard (0.6.3)
       thor (~> 0.14.6)
-    guard-rspec (0.4.4)
+    guard-rspec (0.4.5)
       guard (>= 0.4.0)
     guard-spork (0.2.1)
       guard (>= 0.2.2)
@@ -104,6 +111,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  annotate!
   guard
   guard-rspec
   guard-spork

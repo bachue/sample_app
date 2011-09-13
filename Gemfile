@@ -20,7 +20,10 @@ group :test do
   gem 'rb-inotify'
   gem 'rspec'
   gem 'webrat', '0.7.1'
+  gem 'factory_girl_rails', '1.0'
 end
+
+gem 'gravatar_image_tag'
 
 gem 'sqlite3'
 

@@ -20,4 +20,13 @@ class User < ActiveRecord::Base
   validates_format_of :email, :with => email_regex
   validates_uniqueness_of :email, :case_sensitive => false
   validates_confirmation_of :password
+
+  private
+    def encrypt_password
+      self.encrypted_password = encrypt password
+    end
+
+    def encrypt(string)
+      string
+    end
 end

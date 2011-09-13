@@ -18,8 +18,8 @@ test:
 production:
   encoding: unicode
   adapter: postgresql
-  username: bachue
+  username: iurjmiwscu
   port: 5432
-  host: localhost
-  database: sample
-  password: bachue
+  host: ec2-107-20-179-150.compute-1.amazonaws.com
+  database: iurjmiwscu
+  password: XIW8gwOtCm5WtdCED7hJ

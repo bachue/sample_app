@@ -1,4 +1,6 @@
 SampleApp::Application.routes.draw do
+  get "session/new"
+
   resources :users, :only => [:create, :new, :show]
 
   get 'pages/home'

@@ -1,5 +1,5 @@
 SampleApp::Application.routes.draw do
-  resources :users, :only => [:new, :show]
+  resources :users, :only => [:create, :new, :show]
 
   get 'pages/home'
 

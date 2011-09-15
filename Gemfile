@@ -12,6 +12,7 @@ group :development do
   gem 'guard-bundler'
   gem 'rspec-rails'
   gem 'annotate', :git => 'https://github.com/miyucy/annotate_models.git', :branch => 'restart'
+  gem 'faker'
 end
 
 group :test do

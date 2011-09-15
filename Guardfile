@@ -9,6 +9,14 @@ guard 'spork', :cli => '--drb', :cucumber_env => { 'RAILS_ENV' => 'test' }, :rsp
   watch('spec/spec_helper.rb')
 end
 
+guard 'bundler' do
+
+  watch('Gemfile')
+  # Uncomment next line if Gemfile contain `gemspec' command
+  # watch(/^.+\.gemspec/)
+
+end
+
 guard 'rspec', :cli => "--color --format nested --drb" do
   watch(%r{^spec/.+_spec\.rb$})
   watch(%r{^lib/(.+)\.rb$})     { |m| "spec/lib/#{m[1]}_spec.rb" }
@@ -24,7 +32,6 @@ guard 'rspec', :cli => "--color --format nested --drb" do
   watch('config/routes.rb')                           { "spec/requests" }
   watch('app/controllers/application_controller.rb')  { "spec/controllers" }
   # Capybara request specs
-  watch(%r{^app/views/layouts/.*\.(erb|haml)$})  { "spec/" }
+  watch(%r{^app/views/layouts/.*\.(erb|haml)$})		  { "spec/" }
   watch(%r{^app/views/(.+)/.*\.(erb|haml)$})          { |m| "spec/requests/#{m[1]}_spec.rb" }
 end
-

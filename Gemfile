@@ -9,6 +9,7 @@ gem 'sqlite3-ruby', '1.2.5', :require => 'sqlite3'
 group :development do
   gem 'guard'
   gem 'guard-rspec'
+  gem 'guard-bundler'
   gem 'rspec-rails'
   gem 'annotate', :git => 'https://github.com/miyucy/annotate_models.git', :branch => 'restart'
 end

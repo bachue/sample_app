@@ -26,7 +26,7 @@ group :test do
 end
 
 gem 'gravatar_image_tag'
-
+gem 'will_paginate'
 gem 'sqlite3'
 
 # Use unicorn as the web server

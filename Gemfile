@@ -25,6 +25,10 @@ group :test do
   gem 'factory_girl_rails', '1.0'
 end
 
+group :development, :test do
+  gem 'database_cleaner'
+end
+
 gem 'gravatar_image_tag'
 gem 'will_paginate'
 gem 'sqlite3'

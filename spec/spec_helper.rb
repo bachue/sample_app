@@ -47,7 +47,7 @@ RSpec.configure do |config|
   config.mock_with :rspec
 
   # Remove this line if you're not using ActiveRecord or ActiveRecord fixtures
-  config.fixture_path = "#{::Rails.root}/spec/fixtures"
+#  config.fixture_path = "#{::Rails.root}/spec/fixtures"
 
   # If you're not using ActiveRecord, or you'd prefer not to run each of your
   # examples within a transaction, remove the following line or assign false
@@ -55,18 +55,18 @@ RSpec.configure do |config|
   config.use_transactional_fixtures = true
   ActiveSupport::Dependencies.clear
 
-#  config.before(:suite) do
-#    DatabaseCleaner.strategy = :truncation
-#    DatabaseCleaner.clean_with(:truncation)
-#  end
-#
-#  config.before(:each) do
-#    DatabaseCleaner.start
-#  end
-#
-#  config.after(:each) do
-#    DatabaseCleaner.clean
-#  end
+  config.before(:all) do
+    DatabaseCleaner.strategy = :transaction
+    DatabaseCleaner.clean_with(:truncation)
+  end
+
+  config.before(:each) do
+    DatabaseCleaner.start
+  end
+
+  config.after(:each) do
+    DatabaseCleaner.clean
+  end
 
   def test_sign_in(user)
     controller.sign_in user
